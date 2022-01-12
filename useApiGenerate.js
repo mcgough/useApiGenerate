@@ -7,7 +7,7 @@ const parsePayloadAndOptions = ({ url, method, pathParamIds, params = {}, ...pay
   
   pathParamIds.forEach((p) => { if (p.name) filteredParams[p.name] = undefined })
   
-  if (method) === 'post' || method === 'put') {
+  if (method === 'post' || method === 'put') {
     return [url, payload, filteredParams]
   }
   
