@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { compile, parse } from 'path-to-regexp'
-import { flowRight } from 'lodash
+import { flowRight } from 'lodash'
 
 const parsePayloadAndOptions = ({ url, method, pathParamIds, params = {}, ...payload }) => {
   const filteredParams = { ...params }
