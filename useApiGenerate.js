@@ -14,7 +14,7 @@ const parsePayloadAndOptions = ({ url, method, pathParamIds, params = {}, ...pay
   return [url, filteredParams]
 }
 
-const generateRequest = (instance, method, compiler) => params => instance[method](...flowRight(parsePayloadAndOptions, compiler)({ params, method })
+const generateRequest = (instance, method, compiler) => params => instance[method](...flowRight(parsePayloadAndOptions, compiler)({ params, method }))
                                                                                    
 const generatePathCompiler = (path) => {
   const compileWithParams = compile(path, { encode: encodeURIComponent })
